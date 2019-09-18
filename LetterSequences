@@ -1,0 +1,30 @@
+#THIS PROGRAM IS INTENDED TO COUNT EACH LETTER IN A WORD OR PHRASE
+#Ethan Jarzombek
+#Comp430
+
+# THIS PROGRAM DOES NOT ENTIRELY WORK YET #
+
+# Get users word or phrase
+message = input("type in a word or phrase: ")
+
+# Create the alphabet variable
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+count = 0
+
+# Loop through each letter of the alphabet
+for i in range(0, len(alphabet)):
+	# Assign letter to each letter every time the program loops
+	letter = alphabet[i]
+
+	# Loop through the user input to see how many of each letter
+	# is in the word/phrase, then increment it by 1
+	for i in range(0, len(message)):
+		if letter == message[i]:
+			count += 1
+		else:
+			count == 0
+
+	# Print out each letter, and how many times it is repeated
+	if count > 0:
+		print ("There are ",count," instances of", letter)
